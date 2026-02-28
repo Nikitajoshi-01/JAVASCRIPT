@@ -5,8 +5,6 @@ accCity="jaipur"
 // error cant assign to const var
 // accId=2
 //dont use var bc block and functuon scope
-
-
 console.log(accId);
 // accEmail="newbpoi"
 accCity="delhi"
