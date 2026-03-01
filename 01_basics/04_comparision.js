@@ -14,8 +14,7 @@ console.log(undefined>0)
 console.log(undefined==0);
 console.log(undefined>=0);
 
-//comparision vs equality check 
-
-
+//comparision vs equality check
+ 
 //strict equality check === checks for value and data type both
 //loose equality check == checks for value only and does type coercion if data types are different --- it converts the 2 diff data tyeps
