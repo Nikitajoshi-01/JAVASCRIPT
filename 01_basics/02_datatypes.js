@@ -49,3 +49,6 @@ const fun=function(){
 fun(); //function call
 console.log(fun); //function definition;
 
+//--------------------------------------------------------------------------------------------------------------------------------------------
+// primitive use stack = copy of variable 
+// non primitive use heap=original reference of variable
