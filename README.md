@@ -1,2 +1,2 @@
 # JAVASCRIPT
-new js for web dev
+new js for web dev , making a project .
