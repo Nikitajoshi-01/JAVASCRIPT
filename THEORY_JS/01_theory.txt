@@ -1,0 +1,44 @@
+JAVASCRIPT EXECUTION CONTEXT:
+- Global Execution Context="this " keyword is used
+- Function Execution Context="this " keyword is used
+- Eval Execution Context="this " keyword is used
+
+//phases of wprk of JAVASCRIPT:
+-memory creation phases
+-execution phases
+
+///////////////////////////////////////////////
+
+
+let val1 = 10
+let val2 = 5
+
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+
+let result1 = addNum(val1, val2)
+let result2 = addNum(10, 2)
+
+
+
+stp1- Global execution --- this
+stp2- Memory phases:
+            val1=undefined 
+            va;2=undefined
+            address=function definition 
+            result1 = undefined
+            result2 = undefined
+
+stp3-execution phases:
+                val1=10
+                val2=5
+                addnum function makes its own context -----
+                        creates a new variable environment +new execution thread
+                    inside that function memory phase and execution phase phir se picture me aate h 
+                after that , this   EXECUTION CONTEXT IS DELETED !!!!!!!!!
+
+
+
+ 

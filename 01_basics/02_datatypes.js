@@ -52,3 +52,43 @@ console.log(fun); //function definition;
 //--------------------------------------------------------------------------------------------------------------------------------------------
 // primitive use stack = copy of variable 
 // non primitive use heap=original reference of variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// TRUTHY AND FALSY VALUES IN JS:
+// FALSY VALUES: -0, 0, "", null, undefined, NaN, false, 0n, -0n, BigInt(0)
+//TRUTHY VALUES: all values except falsy values are truthy values in js
+// --"0",'FALSE'," ",[],{},function(){},true,1,-1,0.1,-0.1,Infinity,-Infinity,BigInt(1),-BigInt(1)
+
+//NULLISH COALESCING OPERATOR: ?? ==NULL UNDEFINED
+let val1;
+val1=val1??"default value"; // if val1 is null or undefined then it will return "default value" otherwise it will return val1
+console.log(val1); // default value
+val1="niki"??"not nikki";
+//TERNARY OPERATOR: condition ? true value : false value
+let age1=18;
+let isAdult=age1>=18 ? "yes" : "no";
+console.log(isAdult); // yes
