@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREAE AND EIDT </title>
+</head>
+<body>
+    <ul class="languages">
+        <li>js</li>
+        <!-- <li>py</li>
+        <li>java</li>
+        <li>c++</li>
+        <li>c#</li> -->
+    </ul>
+</body>
+<script>
+//task: to asdd one more list:
+                            // here the tree is traversed everytime i add another language 
+
+                            function addlang(langname){
+                            const li= document.createElement('li');
+                            li.innerHTML=`${langname}`;
+                            document.querySelector('.languages').appendChild(li);
+                            }
+                            addlang('python');
+                            
+//////////////////////////////////////////
+function addlangoptimised(langname){
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(langname));
+    document.querySelector('.languages').appendChild(li);
+}
+addlangoptimised('java');
+
+
+
+
+
+
+
+// EDITING THE CONTENT OF THE ELEMENTS
+document.querySelector('.languages').
+</script>
+</html>

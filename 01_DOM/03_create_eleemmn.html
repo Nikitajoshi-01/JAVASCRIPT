@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>creating eleemnts 
-        
+
     </title>
 </head>
 <body>
-    
+    <script>
+       const div= document.createElement('div');
+       console.log(div); // gives the div element which is created but it is not added to the document yet
+       div.className="main";
+       div.id=Math.random()*10+1;
+       div.setAttribute("title", "generatoed title ");
+       div.style.backgroundColor="red";
+       div.style.padding="20px";
+    //    div.innerHTML="<h1>this is a heading </h1><p>this is a paragraph </p>";
+       // this si snot prefered as isme pehle fetch hoke aata h then wo overwrite hota h to more work is done as compared to create element and then append child
+       const addText=document.createTextNode("this is a text node");
+       div.appendChild(addText);
+       document.body.appendChild(div);
+    </script>
 </body>
 </html>
