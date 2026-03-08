@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events </title>
+</head>
+<body>
+    <h2>image list </h2>
+    <div>
+        <ul id="image">
+            <li><img  id="img1"width="200px"src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="tree"></li>
+            </li>
+            <li><img  id="img2"width="200px" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></li>
+            </li>
+             <li><img  id="img3" width="200px" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></li>
+            </li>
+             <li><img  id="img4"  width="200px" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></li>
+            </li>
+             <li><img  id="img5" width="200px" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></li>
+            </li>
+            <li><a href="https://www.google.com" id="google"> click here</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('img1').onclick=function(){
+    //     alert("this is my first image");
+    // }
+
+
+    //here this function(e) is the event listener function which will be called when the event is triggered and e is the event object which contains all the information about the event like the target element, the type of event, the coordinates of the mouse etc.
+    document.getElementById('image').addEventListener('click',function(e){
+        // alert("INSIDE THE IMAGE BOX");
+        // console.log(e); // gives the event object which contains all the information about the event like the target element, the type of event, the coordinates of the mouse etc.
+    },true);
+    //this true is event propagation 
+    // -EVENT PROPAGATION: it is the process of how the event is propagated through the DOM tree when an event is triggered on an element. there are three phases of event propagation
+    // EVENT CAPTURING: in this phase the event is captured from the root element to the target element and the event listener is called on the way down to the target element.
+    //EVENT TARGET: in this phase the event is triggered on the target element and the event listener is called on the target element.
+    //EVENT PUBLIC:  THIS IS FALSE 
+    //attachEvent is used to attach the event to the element and it takes two parameters first is the event name and second is the function which will be called when the event is triggered
+
+     document.getElementById('img1').addEventListener('click',function(e){
+        // alert("this is my first image");
+        // e.stopPropagation(); // this will stop the event from propagating to the parent elements and only the event listener of the target element will be called
+    },true);
+//e event object:
+//type , timestamp , defaultprevented 
+// target , toeelement, srclement , current traget 
+// client x , client y , screenx , screen y 
+//altkey , ctrlkey,shiftkey, keycode
+                // document.getElementById('google').addEventListener('click',function(e){
+                
+                //     e.preventDefault(); // this will prevent the default behavior of the link and stop it from navigating to the google website
+                //     e.stopPropagation(); // this will stop the event from propagating to the parent elements and only the event listener of the target element will be called
+                //     console.log("goggle clicked");
+                // },false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//     IF WE WANT KI IMAGE CLICK KARTE HI GAYAB HO JAYE TO !!
+document.querySelector("#image").addEventListener('click',function(e){
+console.log(e.target); // gives the target element which is clicked
+console.log(e.target.parentNode); // gives the parent element of the target element
+console.log(e.target.tagName); // gives the parent element of the target element
+if(e.target.tagName=="IMG"){
+    console.log(e.target.id); // gives the id of the target element which is clicked
+let removeit =e.target.parentNode;
+removeit.remove();
+}
+})
+
+</script>
+</html>

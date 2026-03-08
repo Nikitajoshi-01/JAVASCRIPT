@@ -40,6 +40,14 @@ addlangoptimised('java');
 
 
 // EDITING THE CONTENT OF THE ELEMENTS
-document.querySelector('.languages').
+const doc =document.querySelector('li:nth-child(2)');
+const newele=doc.appendChild(document.createElement('li'));;
+newele.textContent="c++";
+doc.replaceWith(newele); // this will replace the second li with the new li which is created and added as a child of the second li
+
+
+//edit 
+const firstchild=document.querySelector("li:first-child")
+firstchild.outerHTML="<li>c#</li>"; // this will replace the first li with the new li which is created and added as a child of the first li
 </script>
 </html>
