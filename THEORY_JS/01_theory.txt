@@ -41,4 +41,7 @@ stp3-execution phases:
 
 
 
- 
+  default js is synchronous , single threaded , 
+  execution context - next op waits for the previous one to complete .
+  blocking code , non-blocking code 
+  
